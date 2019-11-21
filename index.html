@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 17.1), see www.w3.org">
+
+  <title>Huetten calculatore</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="w3.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="ajax.js"></script>
+</head>
+
+<body>
+  <!-- Navbar (sit on top) -->
+<form id="bestellung" action="">
+
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="#home" class="w3-bar-item w3-button"><b>Vino</b></a>
+
+      <!-- Float links to the right. Hide them on small screens -->
+       <button class=
+      "w3-right w3-bar-item mw3-button w3-black w3-large" type=
+      "submit" value="0" id="frei">Frei</button>
+
+	<div class="w3-container w3-right">
+		Preis <b>&euro;:</b>
+	    <input class="w3-input vino-input-cash" type="text" name="cash" id="cash" readonly="true" min="0" value="0" step="0.01" value="0.00" style='width:6em' />
+          </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content w3-padding" style="max-width:1564px">
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <div class="w3-card">
+          <div class="w3-container">
+            <b>Kinderpunsch:</b>
+	    <input class="w3-input" type="number" name="kinderpunsch" id="kinderpunsch" value="0" readonly="true" />
+          </div>
+
+          <div class="w3-container w3-orange vino-product" onclick="add_item_to_cart('#kinderpunsch', '2.20');">
+            <p><br></p>
+          </div>
+        </div><br>
+
+        <div class="w3-card">
+          <div class="w3-container">
+            <b>Weiss</b>
+	    <input class="w3-input" type="number" name="weiss" id="weiss" value="0" readonly="true" />
+          </div>
+
+          <div class="w3-container w3-light-gray vino-product" onclick="add_item_to_cart('#weiss', '2.5');" >
+            <p><br></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <div class="w3-card">
+          <div class="w3-container">
+            <b>Doppel Pflaume</b>
+	    <input class="w3-input" type="number" name="doppel_pflaume" id="doppel_pflaume" value="0" readonly="true" />
+          </div>
+
+          <div class="w3-container w3-purple vino-product" onclick="add_item_to_cart('#doppel_pflaume', '2.6');" >
+            <p><br></p>
+          </div>
+        </div><br>
+
+        <div class="w3-card">
+          <div class="w3-container">
+            <b>Pflaume</b>
+	    <input class="w3-input" type="number" name="pflaume" id="pflaume" value="0" readonly="true" />
+          </div>
+
+          <div class="w3-container w3-purple vino-product" onclick="add_item_to_cart('#pflaume', '1.3');" >
+            <p><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Navbar (sit on bottom) -->
+
+  <div class="w3-bottom">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card" style="text-align: center;">
+      <!-- Float links to the left.-->
+
+      <div class="w3-left w3-bar-item">
+        <button class="w3-bar-item w3-button w3-red w3-xlarge"
+        type="reset" onclick="document.getElementById('bestellung').reset();">Clear</button>
+      </div>
+   
+
+
+    <div class="w3-bar-itme w3-button w3-tag w3-large w3-gray">
+          <div class="w3-container" onclick="add_item_to_cart('#zehner_karte', '13.0');" >
+            <b>10er Karte</b>
+	    <input class="w3-input" type="number" size="4" name="zehner_karte" id="zehner_karte" value="0" readonly="true" />
+          </div>
+        </div>
+
+
+      <div class="w3-right w3-bar-item">
+      <button class="w3-button w3-green w3-xxlarge" type="submit" id="bezahlt">Bezahlt</button>
+      </div>
+
+    
+    </div>
+  </div>
+
+  </form>
+</body>
+</html>
